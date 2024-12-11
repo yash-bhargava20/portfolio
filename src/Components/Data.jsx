@@ -1,11 +1,24 @@
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const Data = () => {
   return (
-    <div className="w-[500px]">
-      <h1 className="text-5xl font-bold mb-4 font-poppins">Yash Bhargava</h1>
-      <h3 className="text-xl text-white m-3">Student</h3>
-      <p className=" px-2 py-3 text-white font-light">
+    <div className="w-[550px] text-5xl font-semibold mb-4 font-poppins">
+      <h1>
+        <TypeAnimation
+          sequence={[
+            "I am Yash Bhargava",
+            1000,
+            "I am Frontend Developer",
+            1000,
+          ]}
+          wrapper="span"
+          speed={10}
+          repeat={Infinity}
+        />
+      </h1>
+      <h3 className="text-xl text-white m-3 font-light">Student</h3>
+      <p className=" px-2 py-3 text-lg text-white font-light">
         I am a creative student building projects in React and JavaScript.
         Dedicated and passionate about programming!
       </p>

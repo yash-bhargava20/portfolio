@@ -20,7 +20,7 @@ export default {
         },
       },
       animation: {
-        borderRadius: "borderRadius 9s ease-in-out infinite 1s",
+        borderRadius: "borderRadius 7s ease-in-out infinite ",
       },
     },
   },
