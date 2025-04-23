@@ -1,22 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import image from "../assets/Yash.jpg";
-import Qualification from "./Qualification";
-import Experience from "./Experience";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
+  const [active, setActive] = useState(null);
+
   return (
-    <section className="py-20 px-10 m-3 flex flex-col w-full gap-8 h-screen">
-      <h2 className="z-10 text-4xl text-center font-bold mb-8">About Me</h2>
-      <div className="z-10 grid grid-cols-[1fr,2fr] gap-10 mx-10 place-items-center">
-        <div className="h-[300px] w-[300px] rounded-xl overflow-hidden">
+    <section
+      id="about"
+      className="font-poppins py-20 px-10 m-3 w-full flex flex-col gap-8 h-screen justify-center items-center"
+    >
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="z-10 text-4xl text-center font-bold mb-8"
+      >
+        About Me
+      </motion.h2>
+
+      <div className="z-10 grid grid-cols-[1fr,2fr] gap-10 mx-10">
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="relative w-[300px] h-[300px]"
+        >
           <img
             src={image}
-            className="w-full h-full object-cover"
+            className="relative z-10 w-full h-full rounded-xl object-cover"
             alt="Profile"
-          ></img>
-        </div>
+          />
+          <div className="bg-slate-400 bg-opacity-40 backdrop-blur-md w-full h-full rounded-lg absolute top-3 left-3 z-0"></div>
+        </motion.div>
 
-        <div className="text-lg px-3 py-2 leading-relaxed">
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          className="text-lg font-light px-3 py-2 leading-relaxed"
+        >
           <p>
             I am a passionate and dedicated Computer Science student eager to
             kickstart my career in software development. With a strong
@@ -28,14 +53,41 @@ const About = () => {
             about contributing to innovative projects and growing in the tech
             industry.
           </p>
-        </div>
-      </div>
 
-      <div className="flex flex-col gap-5 items-start w-full max-w-md ">
-        <Qualification />
-      </div>
-      <div className="flex flex-col gap-5 items-start w-full max-w-md">
-        <Experience />
+          <div className="mt-5 text-white flex justify-start items-center gap-6 w-[100%]">
+            <button
+              onClick={() =>
+                setActive(active === "education" ? null : "education")
+              }
+            >
+              Education
+              <span className="ml-2">
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </span>
+            </button>
+            <button
+              onClick={() =>
+                setActive(active === "experience" ? null : "experience")
+              }
+            >
+              Experience
+              <span className="ml-2">
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+              </span>
+            </button>
+          </div>
+
+          {active === "education" && (
+            <div className="bg-gray-600 rounded-lg w-[300px] mt-3 p-3">
+              <h2>Education</h2>
+            </div>
+          )}
+          {active === "experience" && (
+            <div className="bg-gray-600 rounded-lg w-[300px] mt-3 p-3">
+              <h2>Experience</h2>
+            </div>
+          )}
+        </motion.div>
       </div>
     </section>
   );

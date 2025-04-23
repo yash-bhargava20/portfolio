@@ -22,8 +22,10 @@ const Data = () => {
         I am a creative student building projects in React and JavaScript.
         Dedicated and passionate about programming!
       </p>
-      <button className="font-medium text-xl mt-8 px-3 py-2 border border-white rounded-md shadow-insetBlack">
-        Download Resume
+      <button className="font-medium text-xl mt-8 px-3 py-2 border border-white rounded-md shadow-insetBlack transition duration-300 hover:bg-gray-800">
+        <a href="/Resume.pdf" download="Yash_Bhargava_Resume.pdf">
+          Download Resume
+        </a>
       </button>
     </div>
   );

@@ -1,0 +1,104 @@
+import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
+
+const data = [
+  {
+    id: 1,
+    title: "Los Angeles Crime Data Analysis",
+    tech: ["AWS", "Amazon S3", "Power BI"],
+  },
+  {
+    id: 2,
+    title: "IMDB Movie Review Sentimental Analyzer",
+    tech: ["Flask", "Python", "NLP"],
+  },
+  {
+    id: 3,
+    title: "Hate Speech Detection",
+    tech: ["Keras", "Tensorflow", "PyAudio"],
+  },
+  {
+    id: 4,
+    title: "Customer Churn Prediction",
+    tech: ["Pandas", "Matplotlib", "Scikit-learn"],
+  },
+  {
+    id: 5,
+    title: "Stock Price Forecasting",
+    tech: ["LSTM", "Keras", "NumPy"],
+  },
+];
+
+const MyProjects = () => {
+  const slidesToShow = 3;
+  const [centerSlide, setCenterSlide] = useState(Math.floor(slidesToShow / 2));
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow,
+    speed: 500,
+    beforeChange: (current, next) => {
+      const center = (next + Math.floor(slidesToShow / 2)) % data.length;
+      setCenterSlide(center);
+    },
+  };
+
+  return (
+    <section
+      id="projects"
+      className="relative z-20 w-full md:w-3/4 mx-auto py-10 font-poppins flex flex-col gap-8 h-screen justify-center "
+    >
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="text-3xl font-bold text-center mb-6"
+      >
+        My Projects
+      </motion.h2>
+
+      <Slider {...settings}>
+        {data.map((d, index) => {
+          const isCenter = index === centerSlide;
+
+          return (
+            <div
+              key={d.id}
+              className={`transition-transform duration-300 px-6 ${
+                isCenter ? "scale-110 z-10" : "scale-90 opacity-70"
+              }`}
+            >
+              <div className="bg-gray-700 backdrop-blur-md bg-opacity-70 p-6 rounded-lg shadow-lg text-white h-[400px] overflow-hidden transition-all">
+                <div className="mb-4 rounded-lg overflow-hidden">
+                  <h2 className="text-lg font-medium text-center">{d.title}</h2>
+                  <img
+                    src="https://via.placeholder.com/300x150"
+                    alt={d.title}
+                    className="w-full h-40 object-cover rounded-lg"
+                  />
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-2 mt-4">
+                  {d.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="bg-white text-black text-sm px-2 py-1 rounded shadow"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </Slider>
+    </section>
+  );
+};
+
+export default MyProjects;
