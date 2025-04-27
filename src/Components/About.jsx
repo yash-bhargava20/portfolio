@@ -10,23 +10,23 @@ const About = () => {
   return (
     <section
       id="about"
-      className="font-poppins py-20 px-10 m-3 w-full flex flex-col gap-8 h-screen justify-center items-center"
+      className="font-poppins py-10 px-4 sm:px-6 md:px-10 w-full flex flex-col gap-8 min-h-screen justify-center items-center"
     >
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="z-10 text-4xl text-center font-bold mb-8"
+        className="z-10 text-3xl sm:text-4xl text-center font-bold mb-8"
       >
         About Me
       </motion.h2>
 
-      <div className="z-10 grid grid-cols-[1fr,2fr] gap-10 mx-10">
+      <div className="z-10 grid grid-cols-1 md:grid-cols-[1fr,2fr] gap-10 md:mx-10 items-center">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          className="relative w-[300px] h-[300px]"
+          className="relative w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] mx-auto"
         >
           <img
             src={image}
@@ -40,9 +40,9 @@ const About = () => {
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          className="text-lg font-light px-3 py-2 leading-relaxed"
+          className="text-base sm:text-lg font-light px-2 py-2 leading-relaxed"
         >
-          <p>
+          <p className="text-center md:text-justify">
             I am a passionate and dedicated Computer Science student eager to
             kickstart my career in software development. With a strong
             foundation in programming, data structures, and web development, I
@@ -54,36 +54,34 @@ const About = () => {
             industry.
           </p>
 
-          <div className="mt-5 text-white flex justify-start items-center gap-6 w-[100%]">
+          <div className="mt-10 text-white flex flex-wrap gap-6 justify-center md:justify-start ">
             <button
               onClick={() =>
                 setActive(active === "education" ? null : "education")
               }
+              className="flex items-center gap-2 hover:text-blue-400"
             >
               Education
-              <span className="ml-2">
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </span>
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </button>
             <button
               onClick={() =>
                 setActive(active === "experience" ? null : "experience")
               }
+              className="flex items-center gap-2 hover:text-blue-400"
             >
               Experience
-              <span className="ml-2">
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </span>
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </button>
           </div>
 
           {active === "education" && (
-            <div className="bg-gray-600 rounded-lg w-[300px] mt-3 p-3">
+            <div className="bg-gray-600 rounded-lg w-full max-w-xs mt-3 p-3">
               <h2>Education</h2>
             </div>
           )}
           {active === "experience" && (
-            <div className="bg-gray-600 rounded-lg w-[300px] mt-3 p-3">
+            <div className="bg-gray-600 rounded-lg w-full max-w-xs mt-3 p-3">
               <h2>Experience</h2>
             </div>
           )}

@@ -13,14 +13,14 @@ const Footer = () => {
       <div className="w-full max-w-7xl mx-auto ">
         <div className="border-t border-gray-600 my-6"></div>
 
-        <div className=" flex justify-between items-center mb-4">
+        <div className=" flex flex-col md:flex-row justify-between items-center mb-4">
           <div>
-            <p className="text-sm ">
+            <p className="text-sm md:text-left">
               &copy; 2025 Yash Bhargava. All rights reserved.
             </p>
           </div>
           <div>
-            <ul className="flex gap-6">
+            <ul className="flex gap-6 text-lg">
               <li>
                 <a href="https://github.com/yash-bhargava20" className="">
                   <FontAwesomeIcon icon={faGithub} />

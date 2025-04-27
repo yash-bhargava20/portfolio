@@ -7,23 +7,30 @@ import { motion } from "framer-motion";
 const Home = () => {
   return (
     <>
-      <section id="home" className="flex justify-center h-screen  m-0 p-0">
+      <section
+        id="home"
+        className="flex justify-center items-center min-h-screen px-4 md:px-10"
+      >
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 2.5, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="z-10 w-full h-[80%] max-w-7xl px-10 py-10 grid grid-cols-[.7fr,2fr,1fr] gap-8 place-items-center"
+          className="z-10 w-full max-w-7xl flex flex-col items-center justify-center gap-8 md:grid md:grid-cols-3 md:place-items-center"
         >
-          <Social />
-          <Data />
-          <div>
-            <div>
-              <img
-                src={image}
-                className="h-[300px] w-[500px] animate-borderRadius"
-              ></img>
-            </div>
+          {/* Image at top on mobile */}
+          <div className="flex justify-center items-center">
+            <img
+              src={image}
+              className="h-[250px] w-[250px] rounded-full object-cover animate-borderRadius"
+              alt="Profile"
+            />
+          </div>
+
+          {/* Social and Data appear side by side */}
+          <div className="flex flex-row flex-wrap gap-8 items-center justify-center w-full col-span-2">
+            <Social />
+            <Data />
           </div>
         </motion.div>
       </section>

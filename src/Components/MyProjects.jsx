@@ -3,32 +3,24 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 const data = [
   {
-    id: 1,
-    title: "Los Angeles Crime Data Analysis",
-    tech: ["AWS", "Amazon S3", "Power BI"],
+    title: "Spotify Clone",
+    tech: ["ReactJS", "Tailwind CSS", "Redux", "Spotify API"],
   },
   {
-    id: 2,
-    title: "IMDB Movie Review Sentimental Analyzer",
-    tech: ["Flask", "Python", "NLP"],
+    title: "Chatbot",
+    tech: ["ReactJS", "NodeJS", "Express", "OpenAI API", "Socket.IO"],
   },
   {
-    id: 3,
-    title: "Hate Speech Detection",
-    tech: ["Keras", "Tensorflow", "PyAudio"],
+    title: "Expense Tracker",
+    tech: ["ReactJS", "Context API", "Chart.js", "NodeJs"],
   },
   {
-    id: 4,
-    title: "Customer Churn Prediction",
-    tech: ["Pandas", "Matplotlib", "Scikit-learn"],
-  },
-  {
-    id: 5,
-    title: "Stock Price Forecasting",
-    tech: ["LSTM", "Keras", "NumPy"],
+    title: "Placement Tracker",
+    tech: ["ReactJs", "JWT Auth", "MongoDB", "Tailwind CSS", "Node JS"],
   },
 ];
 
@@ -45,12 +37,26 @@ const MyProjects = () => {
       const center = (next + Math.floor(slidesToShow / 2)) % data.length;
       setCenterSlide(center);
     },
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
     <section
       id="projects"
-      className="relative z-20 w-full md:w-3/4 mx-auto py-10 font-poppins flex flex-col gap-8 h-screen justify-center "
+      className="relative z-20 w-full m-3 py-10 px-5 md:w-3/4 mx-auto font-poppins flex flex-col gap-8 h-auto justify-center "
     >
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
@@ -67,14 +73,16 @@ const MyProjects = () => {
 
           return (
             <div
-              key={d.id}
+              key={d.title}
               className={`transition-transform duration-300 px-6 ${
                 isCenter ? "scale-110 z-10" : "scale-90 opacity-70"
               }`}
             >
-              <div className="bg-gray-700 backdrop-blur-md bg-opacity-70 p-6 rounded-lg shadow-lg text-white h-[400px] overflow-hidden transition-all">
-                <div className="mb-4 rounded-lg overflow-hidden">
-                  <h2 className="text-lg font-medium text-center">{d.title}</h2>
+              <div className="bg-gray-700 backdrop-blur-md bg-opacity-70 p-6 rounded-lg shadow-lg text-white h-[400px] overflow-hidden transition-all relative">
+                <div className="mb-4 rounded-xl overflow-hidden">
+                  <h2 className="text-lg font-medium text-center mb-3 ">
+                    {d.title}
+                  </h2>
                   <img
                     src="https://via.placeholder.com/300x150"
                     alt={d.title}
@@ -86,12 +94,19 @@ const MyProjects = () => {
                   {d.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-white text-black text-sm px-2 py-1 rounded shadow"
+                      className="bg-white text-black text-xs px-2 py-1 rounded shadow"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
+                <a
+                  href="https://github.com/yash-bhargava20"
+                  target="_blank"
+                  className="text-3xl absolute bottom-2 left-2 m-2"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
               </div>
             </div>
           );
