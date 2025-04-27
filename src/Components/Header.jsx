@@ -18,7 +18,7 @@ const Header = () => {
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, delay: 0, ease: "easeOut" }}
-      className="bg-slate-900 sticky z-50 top-0 left-0"
+      className="bg-slate-900/80  sticky z-50 top-0 left-0"
     >
       <div className="w-full mx-auto px-6 md:px-10">
         <nav className="flex items-center justify-between w-full px-4 md:px-10 py-4">
