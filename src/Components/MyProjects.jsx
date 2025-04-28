@@ -56,7 +56,7 @@ const MyProjects = () => {
   return (
     <section
       id="projects"
-      className="relative z-20 w-full m-3 py-10 px-5 md:w-3/4 mx-auto font-poppins flex flex-col gap-8 h-auto justify-center "
+      className="relative z-20 w-full m-3 py-10 px-5 md:w-3/4 mx-auto font-poppins flex flex-col gap-8 min-h-screen justify-center "
     >
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
