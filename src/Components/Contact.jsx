@@ -12,7 +12,7 @@ const ContactForm = () => {
   return (
     <section
       id="contact"
-      className="font-poppins py-10 px-5 md:px-10 flex flex-col w-full gap-8 h-screen justify-center items-center"
+      className="font-poppins py-10 px-5 md:px-10 flex flex-col w-full gap-8  min-h-screen justify-center items-center"
     >
       <motion.h1
         initial={{ opacity: 0, y: 50 }}

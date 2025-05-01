@@ -26,7 +26,7 @@ const About = () => {
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          className="relative w-[250px] sm:w-[300px] h-[250px] sm:h-[300px] mx-auto"
+          className="relative w-[250px] h-[250px] sm:w-[300px]  sm:h-[300px] mx-auto"
         >
           <img
             src={image}

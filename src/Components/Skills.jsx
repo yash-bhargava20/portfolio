@@ -12,7 +12,7 @@ const techIcons = {
   "Express JS": "devicon-express-original",
   "Mongo DB": "devicon-mongodb-plain colored",
   "My SQL": "devicon-mysql-plain colored",
-  JWT: "devicon-jwt-plain colored", // Added missing icon class (optional)
+  JWT: "devicon-jwt-plain colored",
 };
 
 const Skills = () => {
@@ -20,7 +20,7 @@ const Skills = () => {
     <>
       <section
         id="skills"
-        className="font-poppins font-light w-full min-h-screen flex flex-col justify-center items-center  px-4 py-10 md:px-10"
+        className="font-poppins font-light w-full  min-h-screen flex flex-col justify-center items-center  px-4 py-10 md:px-10"
       >
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
