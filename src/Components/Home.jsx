@@ -27,14 +27,14 @@ const Home = () => {
               />
             </div>
 
-            <div className="flex flex-row justify-between items-center gap-8 md:w-9/12">
+            <div className="flex md:flex-row justify-between items-center gap-8 md:w-9/12">
               {/* Social component */}
               <div className="flex justify-center md:p-2">
                 <Social />
               </div>
 
               {/* Data component */}
-              <div className="flex-grow md:p-5 ">
+              <div className="flex-grow md:max-w-[700px] md:p-5 ">
                 <Data />
               </div>
             </div>

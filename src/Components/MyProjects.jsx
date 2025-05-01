@@ -9,18 +9,22 @@ const data = [
   {
     title: "Spotify Clone",
     tech: ["ReactJS", "Tailwind CSS", "Redux", "Spotify API"],
+    image: "vibebox.png",
   },
   {
     title: "Chatbot",
     tech: ["ReactJS", "NodeJS", "Express", "OpenAI API", "Socket.IO"],
+    image: "",
   },
   {
     title: "Expense Tracker",
     tech: ["ReactJS", "Context API", "Chart.js", "NodeJs"],
+    image: "",
   },
   {
     title: "Placement Tracker",
     tech: ["ReactJs", "JWT Auth", "MongoDB", "Tailwind CSS", "Node JS"],
+    image: "",
   },
 ];
 
@@ -84,7 +88,11 @@ const MyProjects = () => {
                     {d.title}
                   </h2>
                   <img
-                    src="https://via.placeholder.com/300x150"
+                    src={
+                      d.image
+                        ? `/${d.image}`
+                        : "https://via.placeholder.com/300x150"
+                    }
                     alt={d.title}
                     className="w-full h-40 object-cover rounded-lg"
                   />
