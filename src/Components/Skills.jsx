@@ -20,7 +20,7 @@ const Skills = () => {
     <>
       <section
         id="skills"
-        className="font-poppins font-light w-full  flex flex-col justify-center items-center  px-4 py-10 md:px-10"
+        className="font-poppins font-light w-full min-h-[80vh] lg:min-h-screen flex flex-col justify-center items-center  px-4 py-10 md:px-10"
       >
         <motion.h2
           initial={{ y: 50, opacity: 0 }}
