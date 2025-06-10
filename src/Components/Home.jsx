@@ -27,7 +27,7 @@ const Home = () => {
               />
             </div>
 
-            <div className="flex md:flex-row justify-between items-center gap-8 md:w-9/12 m-4">
+            <div className="flex md:flex-row justify-between items-center gap-8 md:w-9/12  p-2">
               {/* Social component */}
               <div className="flex justify-center md:p-2">
                 <Social />
