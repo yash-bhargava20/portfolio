@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <section
         id="home"
-        className="flex justify-center items-center min-h-screen px-4 md:px-10"
+        className="flex justify-center items-center px-4 md:px-10"
       >
         <motion.div
           initial={{ opacity: 0 }}

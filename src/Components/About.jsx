@@ -10,7 +10,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="font-poppins py-10 px-4 sm:px-6 md:px-10 w-full flex flex-col gap-8 min-h-screen justify-center items-center"
+      className="font-poppins py-10 px-4 sm:px-6 md:px-10 w-full flex flex-col gap-8 justify-center items-center"
     >
       <motion.h2
         initial={{ y: 50, opacity: 0 }}
