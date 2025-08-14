@@ -46,7 +46,14 @@ const About = () => {
         >
           <p className="text-center lg:text-justify">
             I am a passionate and dedicated Computer Science student eager to
-            kickstart my career in software development...
+            kickstart my career in software development. With a strong
+            foundation in programming, data structures, and web development, I
+            strive to create efficient and user-friendly solutions. I have
+            hands-on experience with JavaScript, React.js, Node.js, HTML/CSS and
+            I am constantly learning new technologies to stay updated. As a
+            quick learner with a problem-solving mindset, I am enthusiastic
+            about contributing to innovative projects and growing in the tech
+            industry.
           </p>
 
           <div className="mt-10 text-white flex flex-wrap gap-6 justify-center lg:justify-start">
