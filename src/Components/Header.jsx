@@ -28,7 +28,7 @@ const Header = () => {
             <li>
               <button
                 onClick={() => scrollToSection("home")}
-                className="font-normal text-base px-1 py-.5 hover:text-blue-500 transition duration-300 ease-in-out"
+                className="font-normal text-base px-1 py-.5 hover:text-purple-400 transition duration-300 ease-in-out"
               >
                 Home
               </button>
@@ -36,7 +36,7 @@ const Header = () => {
             <li>
               <button
                 onClick={() => scrollToSection("about")}
-                className="font-normal text-base px-1 py-.5 hover:text-blue-500 transition duration-300 ease-in-out"
+                className="font-normal text-base px-1 py-.5 hover:text-purple-400 transition duration-300 ease-in-out"
               >
                 About
               </button>
@@ -44,7 +44,7 @@ const Header = () => {
             <li>
               <button
                 onClick={() => scrollToSection("projects")}
-                className="font-normal text-base px-1 py-.5 hover:text-blue-500 transition duration-300 ease-in-out"
+                className="font-normal text-base px-1 py-.5 hover:text-purple-400 transition duration-300 ease-in-out"
               >
                 My Projects
               </button>
@@ -52,7 +52,7 @@ const Header = () => {
             <li>
               <button
                 onClick={() => scrollToSection("skills")}
-                className="font-normal text-base px-1 py-.5 hover:text-blue-500 transition duration-300 ease-in-out"
+                className="font-normal text-base px-1 py-.5 hover:text-purple-400 transition duration-300 ease-in-out "
               >
                 Skills
               </button>
@@ -60,7 +60,7 @@ const Header = () => {
             <li>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="font-normal text-base px-1 py-.5 hover:text-blue-500 transition duration-300 ease-in-out"
+                className="font-normal text-base px-1 py-.5 hover:text-purple-400 transition duration-300 ease-in-out"
               >
                 Contact Us
               </button>
@@ -82,7 +82,7 @@ const Header = () => {
             <li>
               <button
                 onClick={() => scrollToSection("home")}
-                className="text-base hover:text-blue-500 transition duration-300 ease-in-out"
+                className="text-base hover:text-purple-400 transition duration-300 ease-in-out"
               >
                 Home
               </button>
@@ -90,7 +90,7 @@ const Header = () => {
             <li>
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-base hover:text-blue-500 transition duration-300 ease-in-out"
+                className="text-base hover:text-purple-400 transition duration-300 ease-in-out"
               >
                 About
               </button>
@@ -98,7 +98,7 @@ const Header = () => {
             <li>
               <button
                 onClick={() => scrollToSection("projects")}
-                className="text-base hover:text-blue-500 transition duration-300 ease-in-out"
+                className="text-base hover:text-purple-400 transition duration-300 ease-in-out"
               >
                 My Projects
               </button>
@@ -106,7 +106,7 @@ const Header = () => {
             <li>
               <button
                 onClick={() => scrollToSection("skills")}
-                className="text-base hover:text-blue-500 transition duration-300 ease-in-out"
+                className="text-base hover:text-purple-400 transition duration-300 ease-in-out"
               >
                 Skills
               </button>
@@ -114,7 +114,7 @@ const Header = () => {
             <li>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-base hover:text-blue-500 transition duration-300 ease-in-out"
+                className="text-base hover:text-purple-400 transition duration-300 ease-in-out"
               >
                 Contact Us
               </button>
