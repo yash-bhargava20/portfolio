@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Data = () => {
   return (
-    <div className="w-full sm:w-[550px] text-3xl md:text-5xl font-semibold mb-4 font-poppins px-4 sm:px-0">
+    <div className="w-full  text-xl sm:text-3xl md:text-5xl font-semibold mb-4 font-poppins px-4 sm:px-0">
       <h1>
         <TypeAnimation
           sequence={[

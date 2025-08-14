@@ -18,23 +18,23 @@ const Home = () => {
           viewport={{ once: true }}
           className="z-10 w-full max-w-7xl"
         >
-          <div className="flex flex-col md:flex-row-reverse md:items-center md:justify-between md:gap-8">
+          <div className="flex flex-col md:flex-row-reverse md:items-center md:justify-between md:gap-8 mt-20 md:mt-0">
             <div className="flex justify-center mb-8 md:mb-0 md:w-1/3">
               <img
                 src={image}
-                className="h-[250px] w-[250px] md:h-[300px] md:w-[300px] rounded-full object-cover animate-borderRadius"
+                className="h-40 w-40 md:h-72 md:w-72 sm:h-56 sm:w-56 rounded-full object-cover animate-borderRadius"
                 alt="Profile"
               />
             </div>
 
-            <div className="flex md:flex-row justify-between items-center gap-8 md:w-9/12  p-2">
+            <div className="flex  md:flex-row justify-between items-center gap-8 md:w-9/12  p-2">
               {/* Social component */}
               <div className="flex justify-center md:p-2">
                 <Social />
               </div>
 
               {/* Data component */}
-              <div className="flex-grow md:max-w-[700px] md:p-5 ">
+              <div className="flex-grow w-full md:max-w-2xl md:p-5 ">
                 <Data />
               </div>
             </div>

@@ -12,9 +12,9 @@ const data = [
     image: "vibebox.png",
   },
   {
-    title: "Chatbot",
-    tech: ["ReactJS", "NodeJS", "Express", "OpenAI API", "Socket.IO"],
-    image: "",
+    title: "Real-Time Chat Application",
+    tech: ["ReactJS", "NodeJS", "Express", "Socket.IO", "MongoDB"],
+    image: "chatapp.png",
   },
   {
     title: "Expense Tracker",
@@ -22,7 +22,7 @@ const data = [
     image: "",
   },
   {
-    title: "Placement Tracker",
+    title: "E-commerce Website",
     tech: ["ReactJs", "JWT Auth", "MongoDB", "Tailwind CSS", "Node JS"],
     image: "",
   },
@@ -71,7 +71,10 @@ const MyProjects = () => {
         My Projects
       </motion.h2>
 
-      <Slider {...settings}>
+      <Slider
+        {...settings}
+        className="[&_.slick-dots_li_button:before]:text-white "
+      >
         {data.map((d, index) => {
           const isCenter = index === centerSlide;
 
@@ -82,22 +85,24 @@ const MyProjects = () => {
                 isCenter ? "scale-110 z-10" : "scale-90 opacity-70"
               }`}
             >
-              <div className="bg-gray-700 backdrop-blur-md bg-opacity-70 p-6 rounded-lg shadow-lg text-white h-[400px] overflow-hidden transition-all relative">
-                <div className="mb-4 rounded-xl overflow-hidden">
-                  <h2 className="text-lg font-medium text-center mb-3 ">
+              <div className="bg-gray-700 backdrop-blur-md bg-opacity-70 p-6 rounded-lg shadow-lg text-white h-96 overflow-hidden transition-all relative">
+                <div className="mb-10">
+                  <h2 className="text-lg font-medium text-center mb-3">
                     {d.title}
                   </h2>
-                  <img
-                    src={
-                      d.image
-                        ? `/${d.image}`
-                        : "https://via.placeholder.com/300x150"
-                    }
-                    alt={d.title}
-                    className="w-full h-40 object-cover rounded-lg"
-                  />
-                </div>
 
+                  <div className="w-full h-full rounded-xl overflow-hidden ">
+                    <img
+                      src={
+                        d.image
+                          ? `/${d.image}`
+                          : "https://via.placeholder.com/300x150"
+                      }
+                      alt={d.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
                 <div className="flex flex-wrap justify-center gap-2 mt-4">
                   {d.tech.map((tech, i) => (
                     <span
